@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JavaScript Methods Demonstration</title>
+</head>
+<body>
+    <h1>JavaScript Methods</h1>
+    <nav>
+    <a href="#" onclick="showArray()">Array</a><br>
+    <a href="#" onclick="showString()">String</a><br>
+    <a href="#" onclick="showMath()">Math</a><br>
+    <a href="#" onclick="showDate()">Date</a><br>
+    <a href="#" onclick="showBoolean()">Boolean</a><br>
+    <a href="#" onclick="showNumber()">Numbers</a>
+    </nav>
+    <div id="output">    </div>
+    
+    <script>
+        function showArray() {
+            var output = document.getElementById("output");
+            output.innerHTML = "<h2>Array Methods</h2>";
+
+            var numbers = [1, 2,3,4,5];
+            output.innerHTML += "<p>Original Array: " + numbers + "</p>";
+
+            output.innerHTML += "<p>Length: " + numbers.length + "</p>";
+            output.innerHTML += "<p>Join: " + numbers.join(", ") + "</p>";
+            output.innerHTML += "<p>Pop: " + numbers.pop() + "</p>";
+            output.innerHTML += "<p>Push: " + numbers.push(6) + "</p>";
+            output.innerHTML += "<p>Shift: " + numbers.shift() + "</p>";
+            output.innerHTML += "<p>Unshift: " + numbers.unshift(0) + "</p>";
+            output.innerHTML += "<p>Reverse: " + numbers.reverse() + "</p>";
+            output.innerHTML += "<p>Sort: " + numbers.sort() + "</p>";
+            output.innerHTML += "<p>Slice(2, 4): " + numbers.slice(2, 4) + "</p>";
+            output.innerHTML += "<p>Splice(2, 2, 'a', 'b'): " + numbers.splice(2, 2, "a", "b") + "</p>";
+        }
+        function showString() {
+            var output = document.getElementById("output");
+            output.innerHTML = "<h2>String Methods</h2>";
+
+            var text = new String("String Demonstration");
+            output.innerHTML += "<p>Original String: " + text + "</p>";
+
+            output.innerHTML += "<p>Length: " + text.length + "</p>";
+            output.innerHTML += "<p>toUpperCase: " + text.toUpperCase() + "</p>";
+            output.innerHTML += "<p>toLowerCase: " + text.toLowerCase() + "</p>";
+            output.innerHTML += "<p>charAt(7): " + text.charAt(7) + "</p>";
+            output.innerHTML += "<p>indexOf('Demion'): " + text.indexOf("Demion") + "</p>";
+            output.innerHTML += "<p>replace('String', '--'): " + text.replace("String", "--") + "</p>";
+            output.innerHTML += "<p>substring(0, 3): " + text.substring(0, 3) + "</p>";
+            output.innerHTML += "<p>split(' '): " + text.split(" ") + "</p>";
+            output.innerHTML += "<p>replace('String', '--'): " + text.replace("String", "--") + "</p>";
+            output.innerHTML += "<p>concat():  "+ text.concat(" ","now")+"</p>";
+        }
+
+        function showMath() {
+            var output = document.getElementById("output");
+            output.innerHTML = "<h2>Math Methods</h2>"
+            var num=new Number(8.7);
+           
+            output.innerHTML += "<p>Random: " + Math.random() + "</p>";
+            output.innerHTML += "<p>Round(num): " + Math.round(num) + "</p>";
+            output.innerHTML += "<p>Ceil(num): " + Math.ceil(num) + "</p>";
+            output.innerHTML += "<p>Floor(num): " + Math.floor(num) + "</p>";
+            output.innerHTML += "<p>Abs(-5): " + Math.abs(-5) + "</p>";
+            output.innerHTML += "<p>Sqrt(num): " + Math.sqrt(num) + "</p>";
+            output.innerHTML += "<p>Pow(num, 3): " + Math.pow(num, 2) + "</p>";
+            output.innerHTML += "<p>Min(50, 0, 12, 4): " + Math.min(50, 0, 12, 4) + "</p>";
+            output.innerHTML += "<p>Max(51, 80, 92, 2): " + Math.max(51, 80, 92, 2) + "</p>";
+        }
+
+        function showDate() {
+            var output = document.getElementById("output");
+            output.innerHTML = "<h2>Date Methods</h2>";
+
+            var currentDate = new Date();
+            output.innerHTML += "<p>Current Date: " + Date() + "</p>";
+
+            output.innerHTML += "<p>getFullYear: " + currentDate.getFullYear() + "</p>";
+            output.innerHTML += "<p>getMonth: " + currentDate.getMonth() + "</p>";
+            output.innerHTML += "<p>getDate: " + currentDate.getDate() + "</p>";
+            output.innerHTML += "<p>getDay: " + currentDate.getDay() + "</p>";
+            output.innerHTML += "<p>getHours: " + currentDate.getHours() + "</p>";
+            output.innerHTML += "<p>getMinutes: " + currentDate.getMinutes() + "</p>";
+            output.innerHTML += "<p>getSeconds: " + currentDate.getSeconds() + "</p>";
+        }
+        function showBoolean(){
+        var boolObj = new Boolean(true);
+        var output=document.getElementById("output");
+        output.innerHTML = "<h2>Boolean Methods</h2>";
+        
+        var boolValue = boolObj.valueOf();
+        output.innerHTML+= "<p>Value of boolObj: " + boolValue + "</p>";
+
+        var boolType = typeof boolObj;
+        output.innerHTML += "<p>Type of boolObj: " + boolType + "</p>";
+
+        var isTruthy = boolObj.valueOf() ? "Yes" : "No";
+        output.innerHTML += "<p>Is boolObj truthy? " + isTruthy + "</p>";
+
+        var isFalsy = !boolObj.valueOf() ? "Yes" : "No";
+        output.innerHTML += "<p>Is boolObj falsy? " + isFalsy + "</p>";
+
+        var isEqualToTrue = boolObj == true;
+        output.innerHTML += "<p>Is boolObj equal to true? " + isEqualToTrue + "</p>";
+
+        var isStrictEqualToTrue = boolObj === true;
+        output.innerHTML += "Is boolObj strictly equal to true? " + isStrictEqualToTrue + "</p>";
+
+        var primitiveBool = boolObj.valueOf();
+        output.innerHTML += "<p>Value of primitiveBool: " + primitiveBool + "</p>";
+
+        boolObj = new Boolean(false);
+        boolValue = boolObj.valueOf();
+        output.innerHTML += "<p>Value of boolObj: " + boolValue + "</p>";
+    }
+    function showNumber() {
+            var output = document.getElementById("output");
+            var numObj = new Number(76.32);
+            output.innerHTML = "<h2>Number methods</h2>";
+
+            var numValue = numObj.valueOf();
+            output.innerHTML += "<p>Value of numObj: " + numValue + "</p>";
+
+            var numType = typeof numObj;
+            output.innerHTML += "<p>Type of numObj: " + numType + "</p>";
+
+            var isFiniteValue = Number.isFinite(numObj);
+            output.innerHTML += "<p>Is numObj finite? " + isFiniteValue + "</p>";
+
+            var isIntegerValue = Number.isInteger(numObj);
+            output.innerHTML += "<p>Is numObj an integer? " + isIntegerValue + "</p>";
+
+            var primitiveNum = numObj.valueOf();
+            output.innerHTML += "<p>Value of primitiveNum: " + primitiveNum + "</p>";
+        }
+
+    </script>
+</body>
+</html>
